@@ -1,5 +1,6 @@
 usmthesis, a LaTeX class for typesetting a Universiti Sains Malaysia (USM) postgraduate research thesis.
     Copyright (C) 2005-2016  Lim Lian Tze
+    As of Jan 2023, usmthesis will be maintained by wnarifin at https://github.com/wnarifin/usmthesis
 
     Files:
     usmthesis.cls         LaTeX class file

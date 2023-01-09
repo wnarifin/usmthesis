@@ -1,3 +1,8 @@
+%%%%%%%%
+%% !!! To use APA7 referencing style please see https://tex.my/2022/06/05/using-apa7-with-usmthesis/ !!!
+%%
+%% !!! As of Jan 2023, usmthesis will be maintained and updated by wnarifin at https://github.com/wnarifin/usmthesis !!!
+
 %% usmthesis.cls 2016/12/08 version V1.7.
 %% Copyright (c) 2005-2016 by Lim Lian Tze (OH MY GOODNESS HAS IT BEEN THAT LONG)
 %% Current maintainer: Lim Lian Tze (liantze@gmail.com)
