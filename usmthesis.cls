@@ -1,8 +1,16 @@
-%%%%%%%%
-%% !!! To use APA7 referencing style please see https://tex.my/2022/06/05/using-apa7-with-usmthesis/ !!!
-%%
-%% !!! As of Jan 2023, usmthesis will be maintained and updated by wnarifin at https://github.com/wnarifin/usmthesis !!!
+%% usmthesis.cls 2022/01/09 version v1.5
+%% Current maintainer: Wan Nor Arifin (wnarifin@gmail.com) from 2023/01/04 --
+%% 
+%% BRIEF CHANGELOG
+%% ===============
+%% 2022/01/09
+%% - Renamed version v1.7 -> v1.5
+%% - Version number will match the version number of Thesis Template Vx.x USM Library and IPS
+%%   available at: http://www.lib.usm.my/index.php/en/download-thesis-template
+%% - minor updates to follow Thesis Template V1.5 USM Library and IPS
 
+%% Many thanks to Lim Lian Tze for her work on usmthesis all these years
+%% ---- Original preface by Lim Lian Tze ----
 %% usmthesis.cls 2016/12/08 version V1.7.
 %% Copyright (c) 2005-2016 by Lim Lian Tze (OH MY GOODNESS HAS IT BEEN THAT LONG)
 %% Current maintainer: Lim Lian Tze (liantze@gmail.com)
@@ -49,7 +57,6 @@
 %% your institution, that's perfectly fine, but at least keep the license
 %% (LPPL 1.3) and the original author (me) won't you? It's just normal decency.
 %% THANK you. :-)
-%%
 %%
 %  BRIEF CHANGELOG
 %  ===============
@@ -161,7 +168,8 @@
 %  v0.1 Nov 29 2005
 %     - first stab at usmthesis as a package (usmthesis.sty).
 %
-%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Available class options
 % (e.g., \documentclass[urlsf,boxfig,txtt]{usmthesis}
 %
@@ -367,8 +375,8 @@
 \endgroup}
 
 \renewcommand\cftdotsep{1}
-\cftsetrmarg{2.6pc plus1fil}
-\cftsetpnumwidth{2pc}
+\cftsetrmarg{4.5pc plus1fil}
+\cftsetpnumwidth{1.5pc}
 
 \pretocmd{\@starttoc}{\begingroup\singlespacing}{}{}
 \apptocmd{\@starttoc}{\endgroup}{}{}
@@ -395,9 +403,9 @@
 \renewcommand\cftpartleader{\normalfont\cftdotfill{\cftpartdotsep}}
 
 \renewcommand\cftchapfont{}
-\renewcommand\cftchappagefont{\normalfont\normalsize}
+%\renewcommand\cftchappagefont{\normalfont\normalsize} % uncomment to unbold page numbers in TOC for chapters
 \renewcommand\cftchapdotsep{1}
-\renewcommand\cftchapleader{\normalfont\cftdotfill{\cftchapdotsep}}
+%\renewcommand\cftchapleader{\normalfont\cftdotfill{\cftchapdotsep}}  % uncomment to unbold dots in TOC for chapters
 \renewcommand\cftchappresnum{\MakeTextUppercase{\chaptername} }
 \if@tocchapnumwords
 \renewcommand\cftchapaftersnum{:\space}
@@ -414,7 +422,7 @@
 
 \renewcommand\cftsubfigpresnum{Figure }
 \cftsetindents{subfig}{0pt}{6.2pc}
-\renewcommand\cftsubfigleader{\hfill}
+%\renewcommand\cftsubfigleader{\hfill}  % Uncomment to remove dots from subfigure in TOF
 %\renewcommand\cftsubfigpagefont{\bfseries}
 %\renewcommand\cftfigfont{\mdseries\justifying}
 
@@ -708,10 +716,12 @@ for the degree of\\
   \titlespacing*{\chapter}{0pt}{-32pt}{\baselineskip}
 }{}{}
 
+
+%% Additional options that you may edit
 \pretocmd{\mainmatter}{%
   %\addtocontents{toc}{\protect\setlength{\protect\cftbeforechapskip}{2\baselineskip}} % space between chapters
   \addtocontents{toc}{\protect\setlength{\protect\cftbeforechapskip}{\baselineskip}}  % no space between chapters
-  \addtocontents{toc}{\protect\cftpagenumbersoff{chap}}
+  %\addtocontents{toc}{\protect\cftpagenumbersoff{chap}}  % uncomment to turn off page number next to main chapters in toc
   \addtocontents{toc}{\protect\renewcommand\protect\cftchapfont{\protect\bfseries}}
   \settowidth{\tmplength}{\bfseries\MakeTextUppercase{\chaptername\space N}\cftchapaftersnum}
   \if@tocchapnumwords
@@ -734,7 +744,8 @@ for the degree of\\
   \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}
   \addtocontents{toc}{\protect\setlength{\protect\cftbeforechapskip}{\baselineskip}}
   \addtocontents{toc}{\protect\renewcommand\protect\cftchapfont{\protect\mdseries}}
-  \phantomsection\addcontentsline{toc}{part}{\texorpdfstring{\bfseries\appendixtocname}{\appendixtocname}}
+  \phantomsection\addcontentsline{toc}{chapter}{\appendixtocname}
+  %\phantomsection\addcontentsline{toc}{part}{\texorpdfstring{\bfseries\appendixtocname}{\appendixtocname}}
   \thispagestyle{empty}
   \vspace*{\stretch{1}}
     \begin{center}

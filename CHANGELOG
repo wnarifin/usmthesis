@@ -1,5 +1,12 @@
 BRIEF CHANGELOG
 ===============
+2022/01/09
+- Renamed version v1.7 -> v1.5
+- Version number will match the version number of Thesis Template Vx.x USM Library and IPS
+  available at: http://www.lib.usm.my/index.php/en/download-thesis-template
+- minor updates to follow Thesis Template V1.5 USM Library and IPS
+- fixed the link to List of Publications in ToC
+
 v1.7  Dec 08 2016
     - FINAL UPDATE BEFORE v2.0, which will only be possible when IPS
       officially publishes the updated formatted guidelines and samples, and
