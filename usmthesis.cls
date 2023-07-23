@@ -8,6 +8,7 @@
 %% - Version number will match the version number of Thesis Template Vx.x USM Library and IPS
 %%   available at: http://www.lib.usm.my/index.php/en/download-thesis-template
 %% - minor updates to follow Thesis Template V1.5 USM Library and IPS
+%% - fixed the link to List of Publications in ToC
 
 %% Many thanks to Lim Lian Tze for her work on usmthesis all these years
 %% ---- Original preface by Lim Lian Tze ----
@@ -744,7 +745,8 @@ for the degree of\\
   \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}
   \addtocontents{toc}{\protect\setlength{\protect\cftbeforechapskip}{\baselineskip}}
   \addtocontents{toc}{\protect\renewcommand\protect\cftchapfont{\protect\mdseries}}
-  \phantomsection\addcontentsline{toc}{chapter}{\appendixtocname}
+  %\phantomsection\addcontentsline{toc}{chapter}{\appendixtocname} % appendix unbold
+  \phantomsection\addcontentsline{toc}{chapter}{\bfseries\appendixtocname} % appendix bold
   %\phantomsection\addcontentsline{toc}{part}{\texorpdfstring{\bfseries\appendixtocname}{\appendixtocname}}
   \thispagestyle{empty}
   \vspace*{\stretch{1}}
